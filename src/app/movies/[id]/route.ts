@@ -9,7 +9,7 @@ export async function GET(_req: Request,{params} : {params: {id: string}}) {
 }
 
 export async function PATCH(req: Request, {params}: {params: {id: string}}) {
-    const {id} = params;
+    const {id} = await params;
     const movieId = +id;
 
     const movie = movies.find((m) => m.id === movieId);
